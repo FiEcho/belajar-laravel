@@ -13,15 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::resource('/belajar', 'BelajarController');
-Route::resource('/blog','BlogController')->only('index');
+
+Route::resource('blog','BlogController')->only('index');
+
+//Named Routes
+Route::get('profile','ProfileController@index')->name('profile');
  
 // ROUT ID
 // Route::get('/belajar/{id}','BelajarController@coba');
+// Route::get('/blog/{id}','BlogController@show');
+// Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+//     return $postId.' , '.$commentId;
+// });
 Auth::routes();
 
-Route::get('/home','HomeController@index')->name('home');
+Route::get('/home','BelajarController@index')->name('home');

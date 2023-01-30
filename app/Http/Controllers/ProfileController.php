@@ -2,38 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Belajar;
-use App\Models\User;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 
-class BelajarController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        $user = User::all();
-        return view('belajar.index',compact(['user']));
-    } 
-
-
-    // CARA MENGIRIM ID KE BLADE
-    // public function coba(Request $request, $id) {
-    //     return view('belajar.index',['id' => $id]);
-    // }
+        //
+        return view('profile.index');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -59,22 +42,21 @@ class BelajarController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Belajar  $belajar
+     * @param  \App\Models\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function show(Belajar $belajar)
+    public function show(Profile $profile)
     {
         //
-        return 'fitra';
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Belajar  $belajar
+     * @param  \App\Models\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function edit(Belajar $belajar)
+    public function edit(Profile $profile)
     {
         //
     }
@@ -83,10 +65,10 @@ class BelajarController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Belajar  $belajar
+     * @param  \App\Models\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Belajar $belajar)
+    public function update(Request $request, Profile $profile)
     {
         //
     }
@@ -94,10 +76,10 @@ class BelajarController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Belajar  $belajar
+     * @param  \App\Models\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Belajar $belajar)
+    public function destroy(Profile $profile)
     {
         //
     }
