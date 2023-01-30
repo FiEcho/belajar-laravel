@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/belajar', 'BelajarController');
-Route::resource('/blog','BlogController');
+Route::resource('/blog','BlogController')->only('index');
  
 // ROUT ID
 // Route::get('/belajar/{id}','BelajarController@coba');

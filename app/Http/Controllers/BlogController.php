@@ -15,7 +15,7 @@ class BlogController extends Controller
     public function index()
     {
         //
-      
+        return view('Belajar.blog');
     }
 
     /**
@@ -26,7 +26,7 @@ class BlogController extends Controller
     public function create()
     {
         //
-        return view('Belajar.blog');
+
     }
 
     /**
